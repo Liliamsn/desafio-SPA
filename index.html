@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desafio Estágio Ally">
+    <meta name="keywords" content="HTML5, CSS3 e Javascript">
+    <meta name="author" content="Liliam de Souza Nascimento">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@500&display=swap" rel="stylesheet">
+    <title>Curso Culture</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Início do cabeçalho-->
+    <header class="container">
+        <h1 class="container__cabecalho">Curso Culture</h1>
+    </header>
+    <!--Fim do cabeçalho-->
+    <!--Conteúdo principal -->
+    <main>
+        <section class="conteudo">
+            <section>
+                <h2 class="conteudo__subtitulo">Cadastro de Cursos</h2>
+                <div class="conteudo__dados">
+                    <form>
+                        <label for="nomeF" class="conteudo__dados-nome">Nome</label>
+                        <input type="text" name="nomeF" id="nomeF" placeholder="Insira o nome do curso" data-form-nome class="conteudo__dados-input" required>
+                        
+                        <label for="dataI" class="conteudo__dados-nome">Data de Início</label>
+                        <input type="date" name="dataI" id="dataI" data-form-inicio  class="conteudo__dados-input" required>
+                         
+                        <label for="duracao" class="conteudo__dados-nome">Duração(Semanas)</label>
+                        <input type="number" name="duracao" id="duracao" placeholder="semanas" data-form-duracao  class="conteudo__dados-input" required>
+                         
+                        <label for="dataF" class="conteudo__dados-nome">Data de Término</label>
+                        <input type="date" name="dataF" id="dataF" data-form-termino class="conteudo__dados-input" required>
+                         
+                        <label for="mensagem" class="conteudo__dados-nome">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Insira a sua mensagem" data-form-msg class="conteudo__dados-input" required></textarea>
+                        
+                        <input type="submit" value="Cadastrar" class="conteudo__dados-botao" data-button> 
+                    </form>
+                </div>
+            </section>
+            <section>
+                <p class="conteudo__titulo">Pesquisar</p>
+                <div class="conteudo__pesquisar">
+                    <input type="search" class="conteudo__pesquisar-input">
+                    <input type="button" value="Pesquisar" class="conteudo__pesquisar-botao">
+                </div>
+            </section>
+            <section>
+                <div>
+                    <table class="tabela">
+                        <thead data-cabeca>
+                            <tr class="tabela__cabecalho">
+                                <th class="tabela__cabecalho-titulo">Nome</th>
+                                <th class="tabela__cabecalho-titulo">Duração</th>
+                                <th class="tabela__cabecalho-titulo">Data de Início</th>
+                                <th class="tabela__cabecalho-titulo">Data de Término</th>
+                            </tr>
+                        </thead>
+                        <tbody data-corpo>
+                        </tbody>
+                            <tr class="tabela__corpo">
+                            </tr>
+                    </table>
+                </div>
+            </section>
+        </section>
+    </main>
+    <!--Fim do conteúdo principal-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

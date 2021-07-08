@@ -1,0 +1,34 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/pexels-catarina-sousa-68704.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &__cabecalho {
+        text-align: center;
+        @include fontSize(50px);
+        color: $preto;
+        font-weight: bold;
+        font-family: $font-titulo;
+        position: absolute;
+        top: 335px;
+        left: 550px;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        background-repeat: no-repeat;
+        background-image: none;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .container__cabecalho {
+        top: 150px;
+        left: 280px;
+    }
+}

@@ -1,0 +1,37 @@
+$rosa-palido: #D9C3B0;
+$preto:#000;
+$laranja-forte:#D96704;
+$azul-claro: #7292A6;
+$branco: #FFFFFF;
+$font-titulo: 'Big Shoulders Stencil Display', cursive;
+
+@function calculaRem($size) {
+    @return $size/16px * 1rem;
+}
+
+@mixin fontSize($size) {
+    font-size: calculaRem($size);
+}
+
+$directions: top, right, bottom, left;
+$layout-margin-size: 10px;
+
+@each $direction in $directions {
+    %no-margin-#{$direction} {margin-#{$direction}: 0;}
+    %default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
+    %triple-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 3;}
+    %quadruple-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 4;}
+    %fifth-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 5;}
+}
+
+@import "header", "main", "table";
+
+
+
+
+
+
+
+
+
+

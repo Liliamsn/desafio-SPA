@@ -1,0 +1,95 @@
+main {
+    padding-bottom: 30px;
+    background: linear-gradient($branco, $azul-claro);
+}
+
+.conteudo {
+    width: 940px;
+    margin: 0 auto;
+
+    &__subtitulo {
+        padding: 20px 0 20px 0;
+        @include fontSize(22px);
+    }
+
+    &__dados {
+        padding-top: 30px;
+        position: relative;
+        padding-bottom: 20px;
+
+        &-nome {
+            display: block;
+            padding-bottom: 10px;
+        }
+
+        &-input {
+            width: 40%;
+            @extend %default-margin-bottom;
+            padding: 10px 20px;
+            opacity: .5;
+            
+        }
+
+        &-botao {
+            padding: 10px 15px 10px 15px;
+            border: none;
+            background-color:$laranja-forte;
+            color: $preto;
+            @include fontSize(14px);
+            transition: all 400ms ease-in;
+            position: absolute;
+            @extend %quadruple-margin-bottom;
+            top: 550px;
+            left: 325px;
+
+            &:hover {
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__titulo {
+        margin-top: 30px;
+    }
+
+    &__pesquisar {
+        margin: 20px 0 30px 0;
+        display: flex;
+
+        &-input {
+            width: 30%;
+            opacity: .5;
+        }
+        
+        &-botao {
+            width: 10%;
+            margin-left: 10px;
+            border: none;
+            background-color:$laranja-forte;
+            color: $preto;
+        }  
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .conteudo {
+        width: 400px;
+    }
+
+    .conteudo__dados-input {
+        width: 70%;
+    }
+
+    .conteudo__dados-botao {
+        padding: 8px 10px 8px 10px;
+        left: 240px;
+    }
+    .conteudo__pesquisar-input {
+        width: 50%;
+    }
+    .conteudo__pesquisar-botao {
+        width: 20%;
+        margin-left: 5px;
+    }
+}
